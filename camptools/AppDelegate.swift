@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  camptools
 //
-//  Created by 北洞亜也加 on 2021/09/12.
+//  Created by  on 2021/09/12.
 //
 
 import UIKit
@@ -13,7 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // tabbar
+        UITabBar.appearance().tintColor = UIColor.rgba(red: 52, green: 85, blue: 65, alpha: 1)
+        UITabBarItem.appearance().setTitleTextAttributes( [ .font : UIFont.init(name: "HelveticaNeue-Bold", size: 10) as Any, .foregroundColor : UIColor.blue ], for: .normal)
+        UITabBar.appearance().barTintColor = UIColor.white
+        
+        //　navigationBar
+        UINavigationBar.appearance().barTintColor = UIColor.rgba(red: 52, green: 85, blue: 65, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        
         return true
     }
 

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  camptools
 //
-//  Created by 北洞亜也加 on 2021/09/12.
+//  Created by  on 2021/09/12.
 //
 
 import UIKit
