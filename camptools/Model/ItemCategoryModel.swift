@@ -26,3 +26,16 @@ class ItemCategoryModel: Object {
     }
 }
 
+extension ItemCategoryModel {
+    
+    static func getAll() -> Results<ItemCategoryModel>! {
+        let RealmInstance = try! Realm()
+        return RealmInstance.objects(ItemCategoryModel.self)
+    }
+    
+    static func getCategory(with id: String) -> Self {
+        let RealmInstance = try! Realm()
+        let model = RealmInstance.object(ofType: ItemCategoryModel.self, forPrimaryKey: id)
+        return model as! Self
+    }
+}

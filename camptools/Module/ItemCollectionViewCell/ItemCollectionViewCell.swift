@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ItemCollectionViewCell: UICollectionViewCell {
 
@@ -13,5 +14,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    func setupCell(model: ItemModel) {
+        self.backgroundColor = .lightGray
+    }
 }
