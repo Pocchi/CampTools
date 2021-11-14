@@ -18,6 +18,8 @@
 		A75F71BF26EE348F00F50806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71BD26EE348F00F50806 /* Main.storyboard */; };
 		A75F71C126EE349800F50806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C026EE349800F50806 /* Assets.xcassets */; };
 		A75F71C426EE349800F50806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C226EE349800F50806 /* LaunchScreen.storyboard */; };
+		A7B452F62741028500FA4C32 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F52741028500FA4C32 /* TextField.swift */; };
+		A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F82741042B00FA4C32 /* ItemInputController.swift */; };
 		A7E8925626F6365700265E6B /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925526F6365700265E6B /* StyleModel.swift */; };
 		A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925726F6373600265E6B /* CheckListModel.swift */; };
 		A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925A26F6379400265E6B /* CheckLiatItemModel.swift */; };
@@ -42,6 +44,8 @@
 		A75F71C026EE349800F50806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75F71C326EE349800F50806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75F71C526EE349800F50806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B452F52741028500FA4C32 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		A7B452F82741042B00FA4C32 /* ItemInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputController.swift; sourceTree = "<group>"; };
 		A7E8925526F6365700265E6B /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		A7E8925726F6373600265E6B /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
 		A7E8925A26F6379400265E6B /* CheckLiatItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLiatItemModel.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		A75F71B626EE348F00F50806 /* camptools */ = {
 			isa = PBXGroup;
 			children = (
+				A7B452F72741034A00FA4C32 /* CustomClass */,
 				A7E8925D26F63C2800265E6B /* Delegate */,
 				A7E8925C26F63C1100265E6B /* View */,
 				A71AD57D26F252A500355597 /* Extention */,
@@ -152,13 +157,23 @@
 			isa = PBXGroup;
 			children = (
 				A75F71BB26EE348F00F50806 /* ViewController.swift */,
+				A7B452F82741042B00FA4C32 /* ItemInputController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A7B452F72741034A00FA4C32 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				A7B452F52741028500FA4C32 /* TextField.swift */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 		A7E8925C26F63C1100265E6B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7F8BD1D26FCCC29009CD2A8 /* Items */,
 				A75F71C226EE349800F50806 /* LaunchScreen.storyboard */,
 				A75F71BD26EE348F00F50806 /* Main.storyboard */,
 			);
@@ -180,6 +195,13 @@
 				A7F8BD1B26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift */,
 			);
 			path = ItemCollectionViewDataSource;
+			sourceTree = "<group>";
+		};
+		A7F8BD1D26FCCC29009CD2A8 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71AD58B26F62B9300355597 /* ItemModel.swift in Sources */,
+				A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */,
+				A7B452F62741028500FA4C32 /* TextField.swift in Sources */,
 				A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */,
 				A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */,
 				A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */,
