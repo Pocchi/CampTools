@@ -20,6 +20,7 @@
 		A75F71C426EE349800F50806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C226EE349800F50806 /* LaunchScreen.storyboard */; };
 		A7B452F62741028500FA4C32 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F52741028500FA4C32 /* TextField.swift */; };
 		A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F82741042B00FA4C32 /* ItemInputController.swift */; };
+		A7C54E8427897A0800CD7B36 /* TextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C54E8327897A0800CD7B36 /* TextStackView.swift */; };
 		A7E8925626F6365700265E6B /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925526F6365700265E6B /* StyleModel.swift */; };
 		A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925726F6373600265E6B /* CheckListModel.swift */; };
 		A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925A26F6379400265E6B /* CheckLiatItemModel.swift */; };
@@ -46,6 +47,7 @@
 		A75F71C526EE349800F50806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7B452F52741028500FA4C32 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A7B452F82741042B00FA4C32 /* ItemInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputController.swift; sourceTree = "<group>"; };
+		A7C54E8327897A0800CD7B36 /* TextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextStackView.swift; path = ../../../../TextStackView.swift; sourceTree = "<group>"; };
 		A7E8925526F6365700265E6B /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		A7E8925726F6373600265E6B /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
 		A7E8925A26F6379400265E6B /* CheckLiatItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLiatItemModel.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B452F52741028500FA4C32 /* TextField.swift */,
+				A7C54E8327897A0800CD7B36 /* TextStackView.swift */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */,
 				A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */,
 				A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */,
+				A7C54E8427897A0800CD7B36 /* TextStackView.swift in Sources */,
 				A75F71BC26EE348F00F50806 /* ViewController.swift in Sources */,
 				A71AD57F26F252BB00355597 /* UIColor.swift in Sources */,
 				A71AD58F26F631FB00355597 /* ItemCategoryModel.swift in Sources */,

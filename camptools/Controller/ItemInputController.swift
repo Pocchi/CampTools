@@ -5,12 +5,23 @@
 //  Created by  on 2021/11/14
 //  
 //
-
+                                
 import UIKit
 
 class ItemInputController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var TextInputStackView: TextStackView! {
+        didSet {
+            TextInputStackView.borderY()
+        }
+    }
+    @IBOutlet weak var nameTextField: TextField! {
+        didSet {
+            nameTextField.borderBottom()
+        }
+    }
+    
+    @IBOutlet weak var MemoTextField: TextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

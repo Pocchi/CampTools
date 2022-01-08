@@ -100,37 +100,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2g-Us-RUj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmB-uh-uKX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="新規アイテム" id="dyW-yb-eb6">
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="dsF-77-JTV"/>
+                                        <barButtonItem key="rightBarButtonItem" title="追加" id="q1g-Mc-aGl"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2g-Us-RUj">
+                                <rect key="frame" x="0.0" y="55" width="414" height="164"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AmB-uh-uKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <items>
-                                            <navigationItem title="新規アイテム" id="dyW-yb-eb6">
-                                                <barButtonItem key="leftBarButtonItem" title="キャンセル" id="dsF-77-JTV"/>
-                                                <barButtonItem key="rightBarButtonItem" title="追加" id="q1g-Mc-aGl"/>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eis-Ve-0fN" customClass="TextField" customModule="camptools" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="76" width="414" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-56-r4x" userLabel="Text Input StackView" customClass="TextStackView" customModule="camptools" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="11" width="414" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-UL-uaw" userLabel="Name Text View">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="アイテム名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eis-Ve-0fN" customClass="TextField" customModule="camptools" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="0.0" width="404" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="GFv-y3-DYF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="eis-Ve-0fN" firstAttribute="centerY" secondItem="NhQ-UL-uaw" secondAttribute="centerY" id="9wo-ER-foR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="BaH-6a-fPn"/>
+                                                    <constraint firstItem="eis-Ve-0fN" firstAttribute="leading" secondItem="NhQ-UL-uaw" secondAttribute="leading" constant="10" id="H6B-cX-Bjo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eis-Ve-0fN" secondAttribute="trailing" id="bO9-HZ-0bV"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cY-2c-4tU" userLabel="Memo Text View">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メモ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rz0-L1-oKe" userLabel="Memo Text Filed" customClass="TextField" customModule="camptools" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="0.0" width="404" height="50"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="8r9-mL-3Qj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="rz0-L1-oKe" firstAttribute="top" secondItem="5cY-2c-4tU" secondAttribute="top" id="Cas-Hx-V7M"/>
+                                                    <constraint firstItem="rz0-L1-oKe" firstAttribute="leading" secondItem="5cY-2c-4tU" secondAttribute="leading" constant="10" id="iie-Tj-fNh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rz0-L1-oKe" secondAttribute="trailing" id="or8-sQ-pk2"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qrF-Nu-etq"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="NhQ-UL-uaw" secondAttribute="trailing" id="8pX-qp-W3L"/>
+                                            <constraint firstItem="NhQ-UL-uaw" firstAttribute="leading" secondItem="qT2-56-r4x" secondAttribute="leading" id="8vm-iK-Nz3"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qT2-56-r4x" firstAttribute="width" secondItem="SRP-xh-Wq9" secondAttribute="width" id="0tl-uJ-els"/>
+                                    <constraint firstAttribute="bottom" secondItem="qT2-56-r4x" secondAttribute="bottom" constant="106" id="LVd-MJ-HDd"/>
+                                    <constraint firstItem="kL7-mg-VUR" firstAttribute="bottom" secondItem="qT2-56-r4x" secondAttribute="bottom" constant="53" id="RBb-Yq-lnC"/>
+                                    <constraint firstItem="kL7-mg-VUR" firstAttribute="trailing" secondItem="qT2-56-r4x" secondAttribute="trailing" id="TMU-Fk-ns9"/>
+                                    <constraint firstItem="qT2-56-r4x" firstAttribute="leading" secondItem="kL7-mg-VUR" secondAttribute="leading" id="apb-RZ-ekR"/>
+                                    <constraint firstItem="qT2-56-r4x" firstAttribute="trailing" secondItem="kL7-mg-VUR" secondAttribute="trailing" id="xhj-c8-27x"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="SRP-xh-Wq9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="kL7-mg-VUR"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="91f-Lm-zCd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95710009340000002" green="0.97638624910000005" blue="0.980393827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AmB-uh-uKX" firstAttribute="trailing" secondItem="Z2g-Us-RUj" secondAttribute="trailing" id="5bT-JX-Xbs"/>
+                            <constraint firstItem="qT2-56-r4x" firstAttribute="top" secondItem="AmB-uh-uKX" secondAttribute="bottom" constant="10" id="8IA-MC-hyA"/>
+                            <constraint firstItem="AmB-uh-uKX" firstAttribute="leading" secondItem="91f-Lm-zCd" secondAttribute="leading" id="QLZ-fz-1j0"/>
+                            <constraint firstItem="Z2g-Us-RUj" firstAttribute="trailing" secondItem="91f-Lm-zCd" secondAttribute="trailing" id="V9a-u7-QDc"/>
+                            <constraint firstItem="AmB-uh-uKX" firstAttribute="top" secondItem="91f-Lm-zCd" secondAttribute="top" id="ayW-h3-kb4"/>
+                            <constraint firstItem="Z2g-Us-RUj" firstAttribute="top" secondItem="91f-Lm-zCd" secondAttribute="top" constant="55" id="kqI-8E-wxN"/>
+                            <constraint firstItem="Z2g-Us-RUj" firstAttribute="leading" secondItem="91f-Lm-zCd" secondAttribute="leading" id="qXN-Ks-ocC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="g2i-MB-nd6"/>
                     <connections>
-                        <outlet property="nameTextField" destination="eis-Ve-0fN" id="zvk-tr-CfQ"/>
+                        <outlet property="MemoTextField" destination="rz0-L1-oKe" id="3gI-FG-bnO"/>
+                        <outlet property="TextInputStackView" destination="qT2-56-r4x" id="XoP-vE-pDQ"/>
+                        <outlet property="nameTextField" destination="eis-Ve-0fN" id="ZjE-a6-NMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS9-Es-sVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
