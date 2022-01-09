@@ -9,7 +9,6 @@
 import UIKit
 
 class ItemInputController: UIViewController {
-
     @IBOutlet weak var TextInputStackView: TextStackView! {
         didSet {
             TextInputStackView.borderY()
@@ -20,8 +19,14 @@ class ItemInputController: UIViewController {
             nameTextField.borderBottom()
         }
     }
-    
+    @IBOutlet weak var addButtonLabel: UIBarButtonItem! {
+        didSet {
+            addButtonLabel.tintColor = UIColor.init(named: "disabledText")
+        }
+    }
     @IBOutlet weak var MemoTextField: TextField!
+    var name: String?
+    var mamo: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +35,17 @@ class ItemInputController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nameInput(_ sender: UITextField) {
+        addButtonLabel.tintColor = UIColor.white
+        name = sender.text
+        
     }
-    */
-
+    
+    @IBAction func memoInput(_ sender: UITextField) {
+        mamo = sender.text
+    }
+    
+    @IBAction func handleClickAddItem(_ sender: Any) {
+        
+    }
 }
