@@ -122,10 +122,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeT-BA-kiX">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アイテム名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhv-rX-qMg">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アイテム名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhv-rX-qMg" customClass="TextField" customModule="camptools" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="nameInput:" destination="hJ8-Up-Isb" eventType="editingDidEnd" id="ZOe-Sr-Wua"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -185,6 +188,14 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="SRP-xh-Wq9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="kL7-mg-VUR"/>
                             </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SAb-Bs-sv2">
+                                <rect key="frame" x="-166" y="633" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="91f-Lm-zCd"/>
                         <color key="backgroundColor" red="0.95710009340000002" green="0.97638624910000005" blue="0.980393827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -200,6 +211,9 @@
                     </view>
                     <connections>
                         <outlet property="addButtonLabel" destination="q1g-Mc-aGl" id="Bnk-x8-RVb"/>
+                        <outlet property="memoLabel" destination="07u-Ho-AYj" id="fXp-sU-BAJ"/>
+                        <outlet property="memoTextView" destination="5ff-2f-KRo" id="iHM-Ju-dou"/>
+                        <outlet property="nameTextField" destination="dhv-rX-qMg" id="Ajh-5T-br1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS9-Es-sVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
