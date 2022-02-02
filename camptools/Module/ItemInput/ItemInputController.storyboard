@@ -42,9 +42,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="nameInput:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="4xL-dJ-LUO"/>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

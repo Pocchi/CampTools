@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0BA1AABA9FB2D4C9C2D1B2 /* Pods_camptools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E20369694C1ABE476A40822 /* Pods_camptools.framework */; };
 		A717ECE027AA098B00CCC775 /* ItemInputController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A717ECDF27AA098B00CCC775 /* ItemInputController.storyboard */; };
+		A717ECE327AA0E8000CCC775 /* ItemInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717ECE227AA0E8000CCC775 /* ItemInputViewModel.swift */; };
 		A7181ED227947C9F0096A5CB /* TextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7181ED127947C9F0096A5CB /* TextStackView.swift */; };
 		A71AD57F26F252BB00355597 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AD57E26F252BB00355597 /* UIColor.swift */; };
 		A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AD58426F6297900355597 /* ItemCollectionViewCell.swift */; };
@@ -33,6 +34,7 @@
 		2E20369694C1ABE476A40822 /* Pods_camptools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_camptools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		439CB1D4F03449B78A498E15 /* Pods-camptools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camptools.release.xcconfig"; path = "Target Support Files/Pods-camptools/Pods-camptools.release.xcconfig"; sourceTree = "<group>"; };
 		A717ECDF27AA098B00CCC775 /* ItemInputController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemInputController.storyboard; sourceTree = "<group>"; };
+		A717ECE227AA0E8000CCC775 /* ItemInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputViewModel.swift; sourceTree = "<group>"; };
 		A7181ED127947C9F0096A5CB /* TextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStackView.swift; sourceTree = "<group>"; };
 		A71AD57E26F252BB00355597 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A71AD58426F6297900355597 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -94,7 +96,9 @@
 		A717ECDE27AA090D00CCC775 /* ItemInput */ = {
 			isa = PBXGroup;
 			children = (
+				A7B452F82741042B00FA4C32 /* ItemInputController.swift */,
 				A717ECDF27AA098B00CCC775 /* ItemInputController.storyboard */,
+				A717ECE227AA0E8000CCC775 /* ItemInputViewModel.swift */,
 			);
 			path = ItemInput;
 			sourceTree = "<group>";
@@ -184,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				A75F71BB26EE348F00F50806 /* ViewController.swift */,
-				A7B452F82741042B00FA4C32 /* ItemInputController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				A71AD58B26F62B9300355597 /* ItemModel.swift in Sources */,
 				A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */,
 				A7B452F62741028500FA4C32 /* TextField.swift in Sources */,
+				A717ECE327AA0E8000CCC775 /* ItemInputViewModel.swift in Sources */,
 				A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */,
 				A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */,
 				A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */,
