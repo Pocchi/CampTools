@@ -58,11 +58,21 @@ class ItemInputController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func handleClickCancel(_ sender: Any) {
+        // 前に戻る
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func handleClickAddItem(_ sender: Any) {
         if nameTextField.text == nil {
             return
         }
-        print(memoTextView.text)
-        print(nameTextField.text)
+        if ItemModel.create(name: nameTextField.text!, memo: memoTextView.text) != nil {
+            // 前に戻る
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            // 更新失敗ダイアログ
+            Dialog.alert(title: "アラート", message: "メッセージ", parent: self)
+        }
     }
 }

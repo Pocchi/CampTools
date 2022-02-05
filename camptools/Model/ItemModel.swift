@@ -33,13 +33,37 @@ extension ItemModel {
         return RealmInstance.objects(ItemModel.self)
     }
     
-    static func createTaskSchedules(with categoryId: String) -> Void {
-        let RealmInstance = try! Realm()
+    static func create(name: String, memo: String?) -> Self? {
         let model = self.init()
-        let category = ItemCategoryModel.getCategory(with: categoryId)
-        
-        try! RealmInstance.write {
-            category.items.append(model)
+        model.name = name
+        model.memo = memo
+        do {
+            let RealmInstance = try Realm()
+            try RealmInstance.write {
+                RealmInstance.add(model)
+            }
+        } catch {
+            print("Error \(error)")
+            return nil
+        }
+        return model
+    }
+    
+    static func update(with id: String, name: String, memo: String?) -> ItemModel? {
+        let realm = try! Realm()
+        if let model = realm.object(ofType: ItemModel.self, forPrimaryKey: id) {
+            do {
+              try realm.write {
+                model.name = name
+                model.memo = memo
+              }
+            } catch {
+                print("Error \(error)")
+                return nil
+            }
+            return model
+        } else {
+            return nil
         }
     }
 }

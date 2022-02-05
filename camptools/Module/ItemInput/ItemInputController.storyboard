@@ -20,7 +20,11 @@
                                 <rect key="frame" x="0.0" y="12" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="新規アイテム" id="M65-tH-7sI">
-                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="N4P-Df-SSp"/>
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="N4P-Df-SSp">
+                                            <connections>
+                                                <action selector="handleClickCancel:" destination="Y6W-OH-hqX" id="llu-Nj-q22"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="追加" style="done" id="Ah0-5a-t5U">
                                             <connections>
                                                 <action selector="handleClickAddItem:" destination="Y6W-OH-hqX" id="1pM-G4-fhv"/>
