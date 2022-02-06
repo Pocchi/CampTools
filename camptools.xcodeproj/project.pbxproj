@@ -11,6 +11,7 @@
 		A717ECE027AA098B00CCC775 /* ItemInputController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A717ECDF27AA098B00CCC775 /* ItemInputController.storyboard */; };
 		A717ECE327AA0E8000CCC775 /* ItemInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717ECE227AA0E8000CCC775 /* ItemInputViewModel.swift */; };
 		A717ECE527AE72F900CCC775 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717ECE427AE72F800CCC775 /* Dialog.swift */; };
+		A717ECE727AF617800CCC775 /* ItemCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717ECE627AF617800CCC775 /* ItemCollectionViewModel.swift */; };
 		A7181ED227947C9F0096A5CB /* TextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7181ED127947C9F0096A5CB /* TextStackView.swift */; };
 		A71AD57F26F252BB00355597 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AD57E26F252BB00355597 /* UIColor.swift */; };
 		A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AD58426F6297900355597 /* ItemCollectionViewCell.swift */; };
@@ -37,6 +38,7 @@
 		A717ECDF27AA098B00CCC775 /* ItemInputController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemInputController.storyboard; sourceTree = "<group>"; };
 		A717ECE227AA0E8000CCC775 /* ItemInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputViewModel.swift; sourceTree = "<group>"; };
 		A717ECE427AE72F800CCC775 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		A717ECE627AF617800CCC775 /* ItemCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewModel.swift; sourceTree = "<group>"; };
 		A7181ED127947C9F0096A5CB /* TextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStackView.swift; sourceTree = "<group>"; };
 		A71AD57E26F252BB00355597 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A71AD58426F6297900355597 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				A71AD58426F6297900355597 /* ItemCollectionViewCell.swift */,
 				A71AD58526F6297900355597 /* ItemCollectionViewCell.xib */,
+				A717ECE627AF617800CCC775 /* ItemCollectionViewModel.swift */,
 			);
 			path = ItemCollectionViewCell;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				A7B452F62741028500FA4C32 /* TextField.swift in Sources */,
 				A717ECE327AA0E8000CCC775 /* ItemInputViewModel.swift in Sources */,
 				A71AD58626F6297900355597 /* ItemCollectionViewCell.swift in Sources */,
+				A717ECE727AF617800CCC775 /* ItemCollectionViewModel.swift in Sources */,
 				A7E8925826F6373600265E6B /* CheckListModel.swift in Sources */,
 				A7E8925B26F6379400265E6B /* CheckLiatItemModel.swift in Sources */,
 				A717ECE527AE72F900CCC775 /* Dialog.swift in Sources */,
