@@ -11,6 +11,7 @@ import RealmSwift
 class ViewController: UIViewController {
 
     let itemList = ItemModel.getAll()
+    let viewModel = ItemCollectionViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -33,7 +34,8 @@ class ViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width, height: 100)
         collectionView.collectionViewLayout = layout
- 
+        
+        viewModel.ViewDidLoad()
     }
 
     
