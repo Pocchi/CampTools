@@ -7,8 +7,10 @@ target 'camptools' do
   use_frameworks!
 
   # Pods for camptools
-  pod 'RealmSwift'
-  pod 'RxSwift', '6.2.0'
-  pod 'RxCocoa', '6.2.0'
+  pod 'Realm', '~> 10.21'
+  pod 'RealmSwift', '~> 10.21'
+  pod 'RxSwift', '~> 6.1'
+  pod 'RxCocoa', '~> 6.1'
+  pod 'RxRealm', '5.0.4'
 
 end

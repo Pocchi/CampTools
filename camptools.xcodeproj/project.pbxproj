@@ -61,7 +61,7 @@
 		A7E8925526F6365700265E6B /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		A7E8925726F6373600265E6B /* CheckListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListModel.swift; sourceTree = "<group>"; };
 		A7E8925A26F6379400265E6B /* CheckLiatItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLiatItemModel.swift; sourceTree = "<group>"; };
-		A7F8BD1B26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewDataSource.swift; path = camptools/Module/ItemCollectionViewCell/ItemCollectionViewDataSource.swift; sourceTree = SOURCE_ROOT; };
+		A7F8BD1B26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewDataSource.swift; path = camptools/Module/ItemCollectionViewDataSources/ItemCollectionViewDataSource.swift; sourceTree = SOURCE_ROOT; };
 		F682F171C6E33E4540405656 /* Pods-camptools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camptools.debug.xcconfig"; path = "Target Support Files/Pods-camptools/Pods-camptools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,13 +107,6 @@
 			path = ItemInput;
 			sourceTree = "<group>";
 		};
-		A717ECE127AA0B3000CCC775 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		A71AD57D26F252A500355597 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +118,8 @@
 		A71AD58826F6298300355597 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A717ECE127AA0B3000CCC775 /* New Group */,
+				A758F61027D10BF90089FB89 /* ItemCollectionViewDataSources */,
 				A717ECDE27AA090D00CCC775 /* ItemInput */,
-				A7F8BD1A26FCC23F009CD2A8 /* ItemCollectionViewDataSource */,
 				A71AD58926F6298E00355597 /* ItemCollectionViewCell */,
 			);
 			path = Module;
@@ -141,6 +133,14 @@
 				A717ECE627AF617800CCC775 /* ItemCollectionViewModel.swift */,
 			);
 			path = ItemCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A758F61027D10BF90089FB89 /* ItemCollectionViewDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F8BD1B26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift */,
+			);
+			path = ItemCollectionViewDataSources;
 			sourceTree = "<group>";
 		};
 		A75F71AB26EE348F00F50806 = {
@@ -224,14 +224,6 @@
 				A75F71B926EE348F00F50806 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		A7F8BD1A26FCC23F009CD2A8 /* ItemCollectionViewDataSource */ = {
-			isa = PBXGroup;
-			children = (
-				A7F8BD1B26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift */,
-			);
-			path = ItemCollectionViewDataSource;
 			sourceTree = "<group>";
 		};
 		A7F8BD1D26FCCC29009CD2A8 /* Items */ = {

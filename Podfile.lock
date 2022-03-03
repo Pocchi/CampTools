@@ -7,20 +7,28 @@ PODS:
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
+  - RxRealm (5.0.4):
+    - Realm (~> 10.21)
+    - RealmSwift (~> 10.21)
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
 
 DEPENDENCIES:
-  - RealmSwift
-  - RxCocoa (= 6.2.0)
-  - RxSwift (= 6.2.0)
+  - Realm (~> 10.21)
+  - RealmSwift (~> 10.21)
+  - RxCocoa (~> 6.1)
+  - RxRealm (= 5.0.4)
+  - RxSwift (~> 6.1)
 
 SPEC REPOS:
   trunk:
     - Realm
     - RealmSwift
     - RxCocoa
+    - RxRealm
     - RxRelay
     - RxSwift
 
@@ -28,9 +36,10 @@ SPEC CHECKSUMS:
   Realm: 44b41c3ae39e3ecfded71a04434bfde066c7b317
   RealmSwift: dbf9a4eb06e0c929d51c4ef2e8f951bca541feab
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRealm: 666c8785327fe2fff972a3093b35dc7055c1ca38
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: d2195b930e431c6c718bd708f8b3e3fd610d1820
+PODFILE CHECKSUM: df880845e3e6abb93fdfd7dc0d689ae4e852af7d
 
 COCOAPODS: 1.10.2
