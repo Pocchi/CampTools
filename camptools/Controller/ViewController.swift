@@ -7,16 +7,18 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxRealm
 
 class ViewController: UIViewController {
 
-    let itemList = ItemModel.getAll()
+    let items = ItemModel.getAll()
     let viewModel = ItemCollectionViewModel()
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = dataSource
-            dataSource.itemList = itemList
             collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         }
     }
@@ -36,7 +38,17 @@ class ViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         
         viewModel.ViewDidLoad()
+        dataSource.items = viewModel.items.value
+        
+        if let itemModel = items {
+            Observable.changeset(from: itemModel)
+              .subscribe(onNext: { [weak self] results, changes in
+                  guard let self = self, changes != nil else { return }
+                  print(results)
+                  self.dataSource.items = self.viewModel.items.value
+                  self.collectionView.reloadData()
+              })
+              .disposed(by: disposeBag)
+        }
     }
-
-    
 }

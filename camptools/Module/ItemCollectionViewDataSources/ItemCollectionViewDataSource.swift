@@ -7,23 +7,25 @@
 //
 import UIKit
 import RealmSwift
+import RxSwift
+import RxRealm
 
 final class ItemCollectionViewDataSource: NSObject {
-    var itemList: Results<ItemModel>!
+    var items: [ItemModel] = []
+    let disposeBag = DisposeBag()
 }
 
 extension ItemCollectionViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemList.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCollectionViewCell", for: indexPath)
 
         if let cell = cell as? ItemCollectionViewCell {
-            cell.setupCell(model: itemList[indexPath.row])
+            cell.setupCell(model: items[indexPath.row])
         }
-
         return cell
         
     }

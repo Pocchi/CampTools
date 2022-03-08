@@ -15,7 +15,7 @@ final class ItemCollectionViewModel {
     var name: String = ""
     var memo: String?
     let disposeBag = DisposeBag()
-    var items = [ItemModel]()
+    var items = BehaviorRelay<[ItemModel]>(value: [])
     
     func ViewDidLoad() {
         bindingModel()
@@ -24,18 +24,10 @@ final class ItemCollectionViewModel {
     private func bindingModel() {
         let connectModel = ItemModel.getAll()
         if let itemModel = connectModel {
+            items.accept(Array(itemModel))
             Observable.changeset(from: itemModel)
                 .subscribe(onNext: { results, changes in
-                    if let changes = changes {
-                        // it's an update
-                        print(results)
-                        print("deleted: \(changes.deleted)")
-                        print("inserted: \(changes.inserted)")
-                        print("updated: \(changes.updated)")
-                    } else {
-                        // it's the initial data
-                        print(results)
-                    }
+                    self.items.accept(Array(results))
                 }).disposed(by: disposeBag)
         }
     }
