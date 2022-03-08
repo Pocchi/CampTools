@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = dataSource
+            collectionView.delegate = dataSource
             collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         }
     }

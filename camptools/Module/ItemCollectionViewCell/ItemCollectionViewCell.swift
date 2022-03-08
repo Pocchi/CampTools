@@ -9,13 +9,20 @@ import UIKit
 import RealmSwift
 
 class ItemCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.layer.cornerRadius = 6
+            imageView.layer.borderColor = UIColor.systemGray5.cgColor
+            imageView.layer.borderWidth = 1
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     func setupCell(model: ItemModel) {
-        self.backgroundColor = .lightGray
+        itemLabel.text = model.name
     }
 }
