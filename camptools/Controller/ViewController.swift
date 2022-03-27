@@ -23,6 +23,12 @@ class ViewController: UIViewController {
             collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
         }
     }
+    
+    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout! {
+        didSet {
+            collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.collectionView.frame.width / 2, height: self.collectionView.frame.height / 4)
+        }
+    }
 
     private let dataSource = ItemCollectionViewDataSource()
     

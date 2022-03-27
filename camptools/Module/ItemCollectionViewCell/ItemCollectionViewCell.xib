@@ -19,11 +19,11 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czf-f0-3AT">
-                        <rect key="frame" x="10" y="10" width="275" height="167"/>
+                        <rect key="frame" x="5" y="5" width="285" height="172"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1E-ev-QC6">
-                        <rect key="frame" x="10" y="187" width="275" height="21"/>
+                        <rect key="frame" x="5" y="187" width="285" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,13 +33,13 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="czf-f0-3AT" secondAttribute="trailing" constant="10" id="Kbg-RH-pYC"/>
+                <constraint firstAttribute="trailing" secondItem="czf-f0-3AT" secondAttribute="trailing" constant="5" id="Kbg-RH-pYC"/>
                 <constraint firstItem="J1E-ev-QC6" firstAttribute="leading" secondItem="czf-f0-3AT" secondAttribute="leading" id="aWR-uP-xHD"/>
-                <constraint firstItem="czf-f0-3AT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="m7W-3u-dqv"/>
+                <constraint firstItem="czf-f0-3AT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="m7W-3u-dqv"/>
                 <constraint firstItem="J1E-ev-QC6" firstAttribute="top" secondItem="czf-f0-3AT" secondAttribute="bottom" constant="10" id="qwd-bP-cjE"/>
                 <constraint firstAttribute="bottom" secondItem="J1E-ev-QC6" secondAttribute="bottom" constant="10" id="rAF-W3-rsN"/>
                 <constraint firstItem="J1E-ev-QC6" firstAttribute="trailing" secondItem="czf-f0-3AT" secondAttribute="trailing" id="vGo-z0-rHh"/>
-                <constraint firstItem="czf-f0-3AT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vcZ-dc-M1L"/>
+                <constraint firstItem="czf-f0-3AT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="vcZ-dc-M1L"/>
             </constraints>
             <size key="customSize" width="295" height="218"/>
             <connections>

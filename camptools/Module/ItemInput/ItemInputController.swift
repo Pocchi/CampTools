@@ -10,12 +10,8 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class ItemInputController: UIViewController, UITextViewDelegate {
-    @IBOutlet weak var TextInputStackView: TextStackView! {
-        didSet {
-            TextInputStackView.borderY()
-        }
-    }
+class ItemInputController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: TextField! {
         didSet {
             nameTextField.borderBottom()
@@ -29,6 +25,8 @@ class ItemInputController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var memoTextView: UITextView!
     @IBOutlet weak var memoLabel: UILabel!
     private let disposeBag = DisposeBag()
+   
+    private var imageFile: String? = ""
     
     
     override func viewDidLoad() {
@@ -58,6 +56,22 @@ class ItemInputController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func selectImage(_ sender: Any) {
+        // カメラロールが利用可能か？
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self
+            self.present(pickerView, animated: true)
+        } else {
+            let alert = UIAlertController(title: "", message: "カメラロールにアクセスできません", preferredStyle: .alert)
+            let closeButton = UIAlertAction(title: "閉じる", style: .default, handler: nil)
+            alert.addAction(closeButton)
+            // アラート表示
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func handleClickCancel(_ sender: Any) {
         // 前に戻る
         self.dismiss(animated: true, completion: nil)
@@ -67,12 +81,34 @@ class ItemInputController: UIViewController, UITextViewDelegate {
         if nameTextField.text == nil {
             return
         }
-        if ItemModel.create(name: nameTextField.text!, memo: memoTextView.text) != nil {
+        if ItemModel.create(name: nameTextField.text!, memo: memoTextView.text, image: imageFile) != nil {
             // 前に戻る
             self.dismiss(animated: true, completion: nil)
         } else {
             // 更新失敗ダイアログ
             Dialog.alert(title: "アラート", message: "メッセージ", parent: self)
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        imageView.image = image
+        var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        
+        let fileName = "\(NSUUID().uuidString).png"
+        if documentDirectoryFileURL != nil {
+          let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+          documentDirectoryFileURL = path
+        }
+        
+        let pngImageData = image.pngData()
+        do {
+            try pngImageData!.write(to: documentDirectoryFileURL)
+            imageFile = documentDirectoryFileURL.absoluteString
+        } catch {
+            print("エラー")
+        }
+        self.dismiss(animated: true)
     }
 }

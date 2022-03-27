@@ -32,6 +32,10 @@ extension ItemCollectionViewDataSource: UICollectionViewDataSource {
 
 extension ItemCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        let margin: CGFloat = 10
+        let rowNumber: CGFloat = 3
+        let width: CGFloat = UIScreen.main.bounds.size.width / rowNumber - margin
+        let height: CGFloat = width * 1.2
+        return CGSize(width: width, height: height)
     }
 }

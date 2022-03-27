@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,30 +38,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OMb-6S-NXH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="715"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9DI-ov-qpK">
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="9DI-ov-qpK">
                                             <size key="itemSize" width="201" height="150"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x4x-Xv-wT8">
-                                                <rect key="frame" x="0.0" y="0.0" width="201" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="znW-JF-eSD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="201" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="201" height="150"/>
-                                            </collectionViewCell>
-                                        </cells>
+                                        <cells/>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="OMb-6S-NXH" firstAttribute="trailing" secondItem="FoJ-xQ-NKf" secondAttribute="trailing" id="ShW-P1-fjx"/>
-                                    <constraint firstItem="OMb-6S-NXH" firstAttribute="top" secondItem="FoJ-xQ-NKf" secondAttribute="top" id="cAT-mF-Lcc"/>
+                                    <constraint firstItem="OMb-6S-NXH" firstAttribute="top" secondItem="FoJ-xQ-NKf" secondAttribute="top" constant="10" id="cAT-mF-Lcc"/>
                                     <constraint firstItem="OMb-6S-NXH" firstAttribute="bottom" secondItem="FoJ-xQ-NKf" secondAttribute="bottom" id="gkA-V8-cac"/>
                                     <constraint firstItem="OMb-6S-NXH" firstAttribute="leading" secondItem="FoJ-xQ-NKf" secondAttribute="leading" id="kAC-a8-dCO"/>
                                 </constraints>
@@ -87,6 +77,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="OMb-6S-NXH" id="Cyc-0c-xy2"/>
+                        <outlet property="collectionViewFlowLayout" destination="9DI-ov-qpK" id="y72-vX-tll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVJ-Fx-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

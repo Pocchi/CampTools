@@ -12,6 +12,7 @@ class ItemModel: Object {
     @objc dynamic var id: String = NSUUID().uuidString // アイテムID
     @objc dynamic var name: String? = nil // アイテム名
     @objc dynamic var memo: String? = nil // メモ
+    @objc dynamic var image: String? = nil // メモ
     @objc dynamic var createdAt = Date()
     @objc dynamic var updatedAt = Date()
     
@@ -33,10 +34,11 @@ extension ItemModel {
         return RealmInstance.objects(ItemModel.self)
     }
     
-    static func create(name: String, memo: String?) -> Self? {
+    static func create(name: String, memo: String?, image: String?) -> Self? {
         let model = self.init()
         model.name = name
         model.memo = memo
+        model.image = image
         do {
             let RealmInstance = try Realm()
             try RealmInstance.write {
