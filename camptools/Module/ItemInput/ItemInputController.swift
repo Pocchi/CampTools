@@ -11,6 +11,7 @@ import RxSwift
 import UIKit
 
 class ItemInputController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var imageWrapView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: TextField! {
         didSet {
@@ -45,6 +46,13 @@ class ItemInputController: UIViewController, UITextViewDelegate, UIImagePickerCo
                     self?.addButtonLabel.tintColor = UIColor.white
                 }
             }).disposed(by: disposeBag)
+        
+        let imageTapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        imageWrapView.addGestureRecognizer(imageTapGesture)
+        
+        imageTapGesture.rx.event.bind(onNext: { [weak self] _ in
+            self?.selectImageFile()
+        }).disposed(by: disposeBag)
     }
     
     func textViewDidChange(_ textView: UITextView) {
@@ -57,6 +65,9 @@ class ItemInputController: UIViewController, UITextViewDelegate, UIImagePickerCo
     }
     
     @IBAction func selectImage(_ sender: Any) {
+        selectImageFile()
+    }
+    func selectImageFile() {
         // カメラロールが利用可能か？
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let pickerView = UIImagePickerController()

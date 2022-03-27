@@ -25,6 +25,8 @@
 		A75F71C126EE349800F50806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C026EE349800F50806 /* Assets.xcassets */; };
 		A75F71C426EE349800F50806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C226EE349800F50806 /* LaunchScreen.storyboard */; };
 		A76ED50A27F047E9005DCC4D /* FileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76ED50927F047E9005DCC4D /* FileImage.swift */; };
+		A76ED50D27F04F19005DCC4D /* ItemShowController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76ED50C27F04F19005DCC4D /* ItemShowController.storyboard */; };
+		A76ED50F27F04F2A005DCC4D /* ItemShowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76ED50E27F04F2A005DCC4D /* ItemShowController.swift */; };
 		A7B452F62741028500FA4C32 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F52741028500FA4C32 /* TextField.swift */; };
 		A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F82741042B00FA4C32 /* ItemInputController.swift */; };
 		A7E8925626F6365700265E6B /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925526F6365700265E6B /* StyleModel.swift */; };
@@ -55,6 +57,8 @@
 		A75F71C326EE349800F50806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75F71C526EE349800F50806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76ED50927F047E9005DCC4D /* FileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImage.swift; sourceTree = "<group>"; };
+		A76ED50C27F04F19005DCC4D /* ItemShowController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemShowController.storyboard; sourceTree = "<group>"; };
+		A76ED50E27F04F2A005DCC4D /* ItemShowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemShowController.swift; sourceTree = "<group>"; };
 		A7B452F52741028500FA4C32 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A7B452F82741042B00FA4C32 /* ItemInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputController.swift; sourceTree = "<group>"; };
 		A7C54E89278C5BC800CD7B36 /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxBlocking.xcframework; path = Carthage/Build/RxBlocking.xcframework; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		A71AD58826F6298300355597 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A76ED50B27F04EF3005DCC4D /* ItemShow */,
 				A758F61027D10BF90089FB89 /* ItemCollectionViewDataSources */,
 				A717ECDE27AA090D00CCC775 /* ItemInput */,
 				A71AD58926F6298E00355597 /* ItemCollectionViewCell */,
@@ -197,6 +202,15 @@
 				A75F71BB26EE348F00F50806 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A76ED50B27F04EF3005DCC4D /* ItemShow */ = {
+			isa = PBXGroup;
+			children = (
+				A76ED50C27F04F19005DCC4D /* ItemShowController.storyboard */,
+				A76ED50E27F04F2A005DCC4D /* ItemShowController.swift */,
+			);
+			path = ItemShow;
 			sourceTree = "<group>";
 		};
 		A7B452F72741034A00FA4C32 /* CustomClass */ = {
@@ -291,6 +305,7 @@
 				A71AD58726F6297900355597 /* ItemCollectionViewCell.xib in Resources */,
 				A75F71C126EE349800F50806 /* Assets.xcassets in Resources */,
 				A717ECE027AA098B00CCC775 /* ItemInputController.storyboard in Resources */,
+				A76ED50D27F04F19005DCC4D /* ItemShowController.storyboard in Resources */,
 				A75F71BF26EE348F00F50806 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +375,7 @@
 				A71AD58F26F631FB00355597 /* ItemCategoryModel.swift in Sources */,
 				A7E8925626F6365700265E6B /* StyleModel.swift in Sources */,
 				A75F71B826EE348F00F50806 /* AppDelegate.swift in Sources */,
+				A76ED50F27F04F2A005DCC4D /* ItemShowController.swift in Sources */,
 				A75F71BA26EE348F00F50806 /* SceneDelegate.swift in Sources */,
 				A7F8BD1C26FCC282009CD2A8 /* ItemCollectionViewDataSource.swift in Sources */,
 			);

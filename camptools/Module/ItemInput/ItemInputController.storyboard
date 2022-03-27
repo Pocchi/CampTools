@@ -43,16 +43,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoS-WI-mKH" userLabel="Image Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muK-lq-cXZ">
-                                                        <rect key="frame" x="107" y="10" width="200" height="200"/>
-                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="7Tb-fB-SMd"/>
-                                                            <constraint firstAttribute="width" constant="200" id="leJ-lX-sHo"/>
-                                                        </constraints>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muK-lq-cXZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zal-nt-yeg">
-                                                        <rect key="frame" x="145" y="225" width="124" height="31"/>
+                                                        <rect key="frame" x="145" y="134.5" width="124" height="31"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="画像を選択する"/>
                                                         <connections>
@@ -62,10 +59,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="muK-lq-cXZ" firstAttribute="top" secondItem="OoS-WI-mKH" secondAttribute="top" constant="10" id="73Z-sh-OKN"/>
+                                                    <constraint firstItem="muK-lq-cXZ" firstAttribute="top" secondItem="OoS-WI-mKH" secondAttribute="top" id="73Z-sh-OKN"/>
                                                     <constraint firstAttribute="height" constant="300" id="GHH-Yy-vqD"/>
                                                     <constraint firstItem="muK-lq-cXZ" firstAttribute="centerX" secondItem="zal-nt-yeg" secondAttribute="centerX" id="JaO-Sp-sCL"/>
-                                                    <constraint firstItem="zal-nt-yeg" firstAttribute="top" secondItem="muK-lq-cXZ" secondAttribute="bottom" constant="15" id="kBc-vr-sE2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="muK-lq-cXZ" secondAttribute="bottom" id="UJU-2z-sk3"/>
+                                                    <constraint firstItem="zal-nt-yeg" firstAttribute="centerY" secondItem="OoS-WI-mKH" secondAttribute="centerY" id="VTT-iI-0Br"/>
+                                                    <constraint firstAttribute="trailing" secondItem="muK-lq-cXZ" secondAttribute="trailing" id="jkj-Ya-VW1"/>
+                                                    <constraint firstItem="muK-lq-cXZ" firstAttribute="leading" secondItem="OoS-WI-mKH" secondAttribute="leading" id="kY2-Vf-nGx"/>
                                                     <constraint firstItem="muK-lq-cXZ" firstAttribute="centerX" secondItem="OoS-WI-mKH" secondAttribute="centerX" id="rJu-0N-qEY"/>
                                                 </constraints>
                                             </view>
@@ -136,7 +136,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95710009340000002" green="0.97638624910000005" blue="0.980393827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="kMC-EH-YN5" firstAttribute="leading" secondItem="Xlh-W3-rwK" secondAttribute="leading" id="Ooo-8F-CrZ"/>
                                     <constraint firstItem="kMC-EH-YN5" firstAttribute="trailing" secondItem="Xlh-W3-rwK" secondAttribute="trailing" id="SuK-WS-jte"/>
@@ -174,6 +174,7 @@
                     <connections>
                         <outlet property="addButtonLabel" destination="Ah0-5a-t5U" id="13a-Su-2Yl"/>
                         <outlet property="imageView" destination="muK-lq-cXZ" id="bzb-Q4-FKM"/>
+                        <outlet property="imageWrapView" destination="OoS-WI-mKH" id="fai-kS-Du9"/>
                         <outlet property="memoLabel" destination="1Kd-YD-Rkq" id="L1k-Xf-hhH"/>
                         <outlet property="memoTextView" destination="YLz-cf-oUE" id="VuM-VY-SHP"/>
                         <outlet property="nameTextField" destination="JlE-Ey-EPA" id="Elp-5V-fiH"/>
@@ -188,11 +189,11 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
