@@ -93,22 +93,7 @@ class ItemInputController: UIViewController, UITextViewDelegate, UIImagePickerCo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         imageView.image = image
-        var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        
-        let fileName = "\(NSUUID().uuidString).png"
-        if documentDirectoryFileURL != nil {
-          let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-          documentDirectoryFileURL = path
-        }
-        
-        let pngImageData = image.pngData()
-        do {
-            try pngImageData!.write(to: documentDirectoryFileURL)
-            imageFile = documentDirectoryFileURL.absoluteString
-        } catch {
-            print("エラー")
-        }
+        imageFile = FileImage.saveImage(image: image)
         self.dismiss(animated: true)
     }
 }

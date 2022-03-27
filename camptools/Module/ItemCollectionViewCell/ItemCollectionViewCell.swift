@@ -24,5 +24,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     func setupCell(model: ItemModel) {
         itemLabel.text = model.name
+        if let image = model.image, let imageData = FileImage.getUIImageFromDocumentsDirectory(fileName: image) {
+            imageView.image = imageData
+        }
     }
 }

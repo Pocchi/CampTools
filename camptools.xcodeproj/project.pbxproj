@@ -24,6 +24,7 @@
 		A75F71BF26EE348F00F50806 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71BD26EE348F00F50806 /* Main.storyboard */; };
 		A75F71C126EE349800F50806 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C026EE349800F50806 /* Assets.xcassets */; };
 		A75F71C426EE349800F50806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F71C226EE349800F50806 /* LaunchScreen.storyboard */; };
+		A76ED50A27F047E9005DCC4D /* FileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76ED50927F047E9005DCC4D /* FileImage.swift */; };
 		A7B452F62741028500FA4C32 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F52741028500FA4C32 /* TextField.swift */; };
 		A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B452F82741042B00FA4C32 /* ItemInputController.swift */; };
 		A7E8925626F6365700265E6B /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8925526F6365700265E6B /* StyleModel.swift */; };
@@ -53,6 +54,7 @@
 		A75F71C026EE349800F50806 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75F71C326EE349800F50806 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75F71C526EE349800F50806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76ED50927F047E9005DCC4D /* FileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileImage.swift; sourceTree = "<group>"; };
 		A7B452F52741028500FA4C32 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		A7B452F82741042B00FA4C32 /* ItemInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInputController.swift; sourceTree = "<group>"; };
 		A7C54E89278C5BC800CD7B36 /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxBlocking.xcframework; path = Carthage/Build/RxBlocking.xcframework; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				A7B452F52741028500FA4C32 /* TextField.swift */,
 				A7181ED127947C9F0096A5CB /* TextStackView.swift */,
 				A717ECE427AE72F800CCC775 /* Dialog.swift */,
+				A76ED50927F047E9005DCC4D /* FileImage.swift */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";
@@ -210,7 +213,6 @@
 		A7E8925C26F63C1100265E6B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7F8BD1D26FCCC29009CD2A8 /* Items */,
 				A75F71C226EE349800F50806 /* LaunchScreen.storyboard */,
 				A75F71BD26EE348F00F50806 /* Main.storyboard */,
 			);
@@ -224,13 +226,6 @@
 				A75F71B926EE348F00F50806 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		A7F8BD1D26FCCC29009CD2A8 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71AD58B26F62B9300355597 /* ItemModel.swift in Sources */,
+				A76ED50A27F047E9005DCC4D /* FileImage.swift in Sources */,
 				A7B452F92741042B00FA4C32 /* ItemInputController.swift in Sources */,
 				A7B452F62741028500FA4C32 /* TextField.swift in Sources */,
 				A717ECE327AA0E8000CCC775 /* ItemInputViewModel.swift in Sources */,
