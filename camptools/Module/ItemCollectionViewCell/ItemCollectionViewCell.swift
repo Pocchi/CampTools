@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
 
 class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemLabel: UILabel!
@@ -17,6 +18,8 @@ class ItemCollectionViewCell: UICollectionViewCell {
             imageView.layer.borderWidth = 1
         }
     }
+    @IBOutlet weak var mainView: UIView!
+    private let disposeBag = DisposeBag()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +30,14 @@ class ItemCollectionViewCell: UICollectionViewCell {
         if let image = model.image, let imageData = FileImage.getUIImageFromDocumentsDirectory(fileName: image) {
             imageView.image = imageData
         }
+        bindingRx()
+    }
+    
+    private func bindingRx() {
+        let cellTapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        mainView.addGestureRecognizer(cellTapGesture)
+        
+        cellTapGesture.rx.event.bind(onNext: { [weak self] _ in
+        }).disposed(by: disposeBag)
     }
 }

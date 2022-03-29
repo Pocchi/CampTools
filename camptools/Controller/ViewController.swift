@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let items = ItemModel.getAll()
     let viewModel = ItemCollectionViewModel()
     let disposeBag = DisposeBag()
+    let showItem = PublishSubject<ItemModel>()
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -28,6 +29,10 @@ class ViewController: UIViewController {
         didSet {
             collectionViewFlowLayout.estimatedItemSize = CGSize(width: self.collectionView.frame.width / 2, height: self.collectionView.frame.height / 4)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+           print("選択しました: \(indexPath.row)")
     }
 
     private let dataSource = ItemCollectionViewDataSource()
